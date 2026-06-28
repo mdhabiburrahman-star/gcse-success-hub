@@ -100,7 +100,7 @@ function ContactPage() {
         </div>
 
         <form onSubmit={onSubmit} className="card-glow space-y-5">
-          <h2 className="text-2xl font-bold">Book a free trial</h2>
+          <h2 className="text-2xl font-bold">Book a lesson</h2>
           <Field label="Your name" name="name" error={errors.name} placeholder="e.g. Sarah Johnson" />
           <div>
             <label htmlFor="subject" className="text-sm font-medium">Subject of interest</label>
