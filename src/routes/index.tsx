@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "GCSE Maths, Computer Science & English Tutor UK | BrightMind Tutoring" },
-      { name: "description", content: "Improve your GCSE grades with personal 1-to-1 tutoring in Maths, Computer Science and English. UK curriculum, confidence-first teaching. Book a free trial today." },
+      { name: "description", content: "Improve your GCSE grades with personal 1-to-1 tutoring in Maths, Computer Science and English. UK curriculum, confidence-first teaching. Book a lesson today." },
       { property: "og:title", content: "GCSE Tutor UK — Maths, Computer Science, English" },
       { property: "og:description", content: "1-to-1 GCSE tutoring focused on struggling students. Step-by-step, confidence first." },
       { property: "og:url", content: "/" },
