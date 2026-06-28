@@ -41,7 +41,7 @@ export function Footer() {
           <h4 className="text-sm font-semibold text-foreground">Get started</h4>
           <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
             <li><Link to="/pricing" className="hover:text-foreground">Pricing</Link></li>
-            <li><Link to="/contact" className="hover:text-foreground">Book a lesson</Link></li>
+            <li><Link to="/contact" className="hover:text-foreground">Book a trial</Link></li>
             <li><a href={WHATSAPP_URL} className="hover:text-foreground">Chat on WhatsApp</a></li>
           </ul>
         </div>

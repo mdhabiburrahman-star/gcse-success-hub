@@ -122,7 +122,7 @@ function AboutPage() {
               <MessageCircle className="h-4 w-4" /> Message me
             </a>
             <Link to="/contact" className="btn-primary text-sm">
-              Book a lesson
+              Book a trial
             </Link>
           </div>
         </aside>
@@ -336,11 +336,11 @@ function AboutPage() {
           <div className="mt-12 rounded-2xl border border-border bg-card/60 p-6">
             <h3 className="text-xl font-bold">Ready to see if we're a good fit?</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Get in touch to book your first 1-to-1 GCSE lesson.
+              Book a free 30-minute trial lesson — no obligation.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-primary text-sm">
-                Book a Lesson
+                Book Free Trial
               </Link>
               <Link to="/pricing" className="btn-outline text-sm">
                 See pricing

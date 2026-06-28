@@ -42,7 +42,7 @@ export function Nav() {
 
         <div className="hidden lg:block">
           <Link to="/contact" className="btn-primary text-sm">
-            Book a Lesson
+            Book Free Trial
           </Link>
         </div>
 
@@ -71,7 +71,7 @@ export function Nav() {
               </Link>
             ))}
             <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-2 text-sm">
-              Book a Lesson
+              Book Free Trial
             </Link>
           </div>
         </div>

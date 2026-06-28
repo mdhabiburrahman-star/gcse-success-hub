@@ -30,7 +30,7 @@ function PracticePage() {
           <h1 className="mt-5 text-4xl font-bold sm:text-5xl"><span className="text-gradient">Practice that actually moves the needle</span></h1>
           <p className="mt-3 max-w-2xl text-muted-foreground">
             Carefully selected practice resources for current students between
-            lessons. Get in touch to unlock the full hub as a student.
+            lessons. Sign up for a free trial to unlock the full hub.
           </p>
         </div>
         <Link to="/contact" className="btn-primary">Get access <ArrowRight className="h-4 w-4" /></Link>
