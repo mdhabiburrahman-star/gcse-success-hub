@@ -49,7 +49,7 @@ function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-primary">
-                Book Free Trial Lesson <ArrowRight className="h-4 w-4" />
+                Book a Lesson <ArrowRight className="h-4 w-4" />
               </Link>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                 <MessageCircle className="h-4 w-4" /> WhatsApp Chat
