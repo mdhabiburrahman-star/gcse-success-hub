@@ -8,9 +8,9 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact — Book GCSE Tutoring UK | BrightMind Tutoring" },
-      { name: "description", content: "Book a free GCSE tutoring trial. Get in touch via contact form, WhatsApp or email. Fast, friendly response." },
+      { name: "description", content: "Book a GCSE tutoring lesson with Habib. Get in touch via contact form, WhatsApp or email. Fast, friendly response." },
       { property: "og:title", content: "Contact — BrightMind Tutoring" },
-      { property: "og:description", content: "Start improving your grades today — book a free trial." },
+      { property: "og:description", content: "Start improving your grades today — book a lesson." },
       { property: "og:url", content: "/contact" },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
