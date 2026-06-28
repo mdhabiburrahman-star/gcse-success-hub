@@ -122,7 +122,7 @@ function AboutPage() {
               <MessageCircle className="h-4 w-4" /> Message me
             </a>
             <Link to="/contact" className="btn-primary text-sm">
-              Book a trial
+              Book a lesson
             </Link>
           </div>
         </aside>
