@@ -181,11 +181,11 @@ function HomePage() {
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl">Start improving your grades today</h2>
                 <p className="mt-3 max-w-2xl text-muted-foreground">
-                  Book a free 30-minute trial. We'll assess your child's level, agree a grade target, and outline the next 4 lessons.
+                  Book a lesson and we'll assess your child's level, agree a grade target, and outline the next 4 lessons.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-primary">Book Free Trial</Link>
+                <Link to="/contact" className="btn-primary">Book a Lesson</Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </a>
