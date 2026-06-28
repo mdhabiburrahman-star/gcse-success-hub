@@ -27,12 +27,12 @@ const tiers = [
     highlight: false,
   },
   {
-    name: "Standard Session",
-    price: "£50",
-    unit: "Per session (2 hours min)",
-    blurb: "£25 / hour. The core 1-to-1 lesson.",
+    name: "Standard Plan",
+    price: "£200",
+    unit: "4 sessions / month",
+    blurb: "£25 / hour. The core 1-to-1 programme.",
     features: ["Fully personalised plan", "Custom homework", "Parent updates on request", "UK GCSE specification aligned"],
-    cta: "Book a session",
+    cta: "Book now",
     highlight: true,
   },
   {
