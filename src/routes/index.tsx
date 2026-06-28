@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "GCSE Maths, Computer Science & English Tutor UK | BrightMind Tutoring" },
-      { name: "description", content: "Improve your GCSE grades with personal 1-to-1 tutoring in Maths, Computer Science and English. UK curriculum, confidence-first teaching. Book a free trial today." },
+      { name: "description", content: "Improve your GCSE grades with personal 1-to-1 tutoring in Maths, Computer Science and English. UK curriculum, confidence-first teaching. Book a lesson today." },
       { property: "og:title", content: "GCSE Tutor UK — Maths, Computer Science, English" },
       { property: "og:description", content: "1-to-1 GCSE tutoring focused on struggling students. Step-by-step, confidence first." },
       { property: "og:url", content: "/" },
@@ -49,7 +49,7 @@ function HomePage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-primary">
-                Book Free Trial Lesson <ArrowRight className="h-4 w-4" />
+                Book a Lesson <ArrowRight className="h-4 w-4" />
               </Link>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                 <MessageCircle className="h-4 w-4" /> WhatsApp Chat
@@ -181,11 +181,11 @@ function HomePage() {
               <div>
                 <h2 className="text-3xl font-bold sm:text-4xl">Start improving your grades today</h2>
                 <p className="mt-3 max-w-2xl text-muted-foreground">
-                  Book a free 30-minute trial. We'll assess your child's level, agree a grade target, and outline the next 4 lessons.
+                  Book a lesson and we'll assess your child's level, agree a grade target, and outline the next 4 lessons.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-primary">Book Free Trial</Link>
+                <Link to="/contact" className="btn-primary">Book a Lesson</Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </a>

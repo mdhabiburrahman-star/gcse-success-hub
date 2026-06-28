@@ -18,21 +18,21 @@ export const Route = createFileRoute("/pricing")({
 
 const tiers = [
   {
-    name: "Trial Lesson",
-    price: "Free",
-    unit: "30 minutes",
-    blurb: "No-obligation assessment & plan.",
-    features: ["Level diagnostic", "Grade target agreed", "First 4 lessons outlined"],
-    cta: "Book Free Trial",
+    name: "Single Session",
+    price: "£50",
+    unit: "2 hours · £25/hr",
+    blurb: "One focused 1-to-1 lesson.",
+    features: ["Personalised to your topic", "Worked solutions & notes", "Homework set", "UK GCSE specification aligned"],
+    cta: "Book a session",
     highlight: false,
   },
   {
-    name: "Standard Session",
-    price: "£50",
-    unit: "Per session (2 hours min)",
-    blurb: "£25 / hour. The core 1-to-1 lesson.",
+    name: "Standard Plan",
+    price: "£200",
+    unit: "4 sessions / month",
+    blurb: "£25 / hour. The core 1-to-1 programme.",
     features: ["Fully personalised plan", "Custom homework", "Parent updates on request", "UK GCSE specification aligned"],
-    cta: "Book a session",
+    cta: "Book now",
     highlight: true,
   },
   {
