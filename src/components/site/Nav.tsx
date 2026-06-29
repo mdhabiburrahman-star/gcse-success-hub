@@ -1,13 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X, BookOpenCheck } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/subjects", label: "Subjects" },
-  { to: "/lesson-plan", label: "Lesson Plan" },
-  { to: "/practice", label: "Practice Hub" },
+  { to: "/subjects", label: "Tutoring" },
+  { to: "/about", label: "CV & Portfolio" },
+  { to: "/lesson-plan", label: "Journey" },
   { to: "/pricing", label: "Pricing" },
   { to: "/contact", label: "Contact" },
 ] as const;
@@ -18,11 +17,11 @@ export function Nav() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl">
       <div className="container-x flex h-16 items-center justify-between gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-2 font-display text-lg font-bold">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/20 text-primary ring-1 ring-primary/40">
-            <GraduationCap className="h-5 w-5" />
+          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary/20 text-gold ring-1 ring-primary/40">
+            <BookOpenCheck className="h-5 w-5" />
           </span>
           <span className="truncate">
-            Bright<span className="text-gold">Mind</span> Tutoring
+            Tutor<span className="text-gold">Mentor</span> Near&nbsp;Me
           </span>
         </Link>
 
@@ -42,7 +41,7 @@ export function Nav() {
 
         <div className="hidden lg:block">
           <Link to="/contact" className="btn-primary text-sm">
-            Book Free Trial
+            Book Home Tutor
           </Link>
         </div>
 
@@ -71,7 +70,7 @@ export function Nav() {
               </Link>
             ))}
             <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-2 text-sm">
-              Book Free Trial
+              Book Home Tutor
             </Link>
           </div>
         </div>

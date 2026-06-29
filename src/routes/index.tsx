@@ -1,34 +1,50 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
-  Sparkles, MessageCircle, GraduationCap, Star, ShieldCheck, Target,
-  BookOpen, Code2, PenLine, ArrowRight, CheckCircle2, Quote,
+  Sparkles, MessageCircle, BookOpen, ShieldCheck, Target,
+  Code2, ArrowRight, CheckCircle2, Quote, Headphones, MessageSquare,
+  Eye, PenLine, Brain, Dumbbell, Lightbulb, Home, MapPin,
 } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
-import { WHATSAPP_URL } from "@/lib/site-config";
+import { WHATSAPP_URL, BRAND_NAME } from "@/lib/site-config";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "GCSE Maths, Computer Science & English Tutor UK | BrightMind Tutoring" },
-      { name: "description", content: "Improve your GCSE grades with personal 1-to-1 tutoring in Maths, Computer Science and English. UK curriculum, confidence-first teaching. Book a free trial today." },
-      { property: "og:title", content: "GCSE Tutor UK — Maths, Computer Science, English" },
-      { property: "og:description", content: "1-to-1 GCSE tutoring focused on struggling students. Step-by-step, confidence first." },
-      { property: "og:url", content: "/" },
+      { title: "Private Home Tutor London — Maths & Computer Science | TutorMentor Near Me" },
+      { name: "description", content: "Private one-to-one home tutor in London for Mathematics and Computer Science. Face-to-face tuition for school, GCSE, A-Level, college and university students. I come to you." },
+      { name: "keywords", content: "private home tutor London, math tutor near me, computer science tutor London, one to one tutoring London, home tuition London, GCSE maths tutor, A-Level computer science tutor, university programming tutor, TutorMentor Near Me" },
+      { property: "og:title", content: "Private Home Tutor London — Maths & Computer Science" },
+      { property: "og:description", content: "Face-to-face one-to-one home tutoring in London. Maths & Computer Science for school, college and university students." },
+      { property: "og:url", content: "https://brightmindtutoring.lovable.app/" },
+      { property: "og:image", content: "https://brightmindtutoring.lovable.app/og-home.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({
         "@context": "https://schema.org",
-        "@type": "EducationalOrganization",
-        name: "BrightMind Tutoring",
-        areaServed: "United Kingdom",
-        description: "1-to-1 GCSE tutoring in Maths, Computer Science and English.",
+        "@type": "LocalBusiness",
+        name: BRAND_NAME,
+        description: "Private one-to-one home tutoring in London for Maths and Computer Science.",
+        areaServed: { "@type": "City", name: "London" },
+        address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
+        priceRange: "££",
+        serviceType: ["Private home tutoring", "Maths tutoring", "Computer Science tutoring"],
       }),
     }],
   }),
   component: HomePage,
 });
+
+const journey = [
+  { icon: Headphones, label: "Listening" },
+  { icon: MessageSquare, label: "Speaking" },
+  { icon: Eye, label: "Reading" },
+  { icon: PenLine, label: "Writing" },
+  { icon: Lightbulb, label: "Problem Solving" },
+  { icon: Dumbbell, label: "Practice" },
+  { icon: Brain, label: "Brain Boosting" },
+];
 
 function HomePage() {
   return (
@@ -37,68 +53,71 @@ function HomePage() {
       <section className="relative overflow-hidden">
         <div className="container-x grid gap-12 py-16 md:py-24 lg:grid-cols-2 lg:items-center">
           <div>
-            <span className="eyebrow"><Sparkles className="h-3.5 w-3.5" /> UK GCSE Specialist Tutor</span>
+            <span className="eyebrow"><Sparkles className="h-3.5 w-3.5" /> London · Home tuition · Maths & CS</span>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] sm:text-5xl md:text-6xl">
-              <span className="text-gradient">Improve Your GCSE Grades</span>
-              <br />with Personal 1-to-1 Tutoring in Maths, Computer Science & English
+              <span className="text-gradient">Private One-to-One Home Tutoring in London</span>
+              <br /><span className="text-foreground/85 text-3xl sm:text-4xl md:text-5xl">Maths & Computer Science</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg text-muted-foreground">
-              Built for students who struggle, lose confidence, or fall behind.
-              Step-by-step lessons that turn weak areas into exam strengths —
-              with a calm, patient tutor who actually cares.
+              I come to you — personalised, patient and practical tutoring at your
+              home in London. No online classes. Just real, face-to-face support
+              that turns weak students into confident, strong learners.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="btn-primary">
-                Book Free Trial Lesson <ArrowRight className="h-4 w-4" />
+                Book a Home Tutor in London <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link to="/about" className="btn-outline">
+                View My CV & Portfolio
               </Link>
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
-                <MessageCircle className="h-4 w-4" /> WhatsApp Chat
+                <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-muted-foreground">
-              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> DBS-checked tutor</div>
-              <div className="flex items-center gap-2"><Star className="h-4 w-4 text-gold" /> 5-star parent feedback</div>
-              <div className="flex items-center gap-2"><Target className="h-4 w-4 text-gold" /> Grade-focused method</div>
+              <div className="flex items-center gap-2"><Home className="h-4 w-4 text-gold" /> I visit your home</div>
+              <div className="flex items-center gap-2"><MapPin className="h-4 w-4 text-gold" /> Covering London</div>
+              <div className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-gold" /> 13+ years teaching</div>
             </div>
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-tr from-primary/40 via-fuchsia-500/20 to-gold/20 blur-3xl" />
-            <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl">
+            <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-gradient-to-tr from-primary/40 via-[oklch(0.5_0.13_200/30%)] to-gold/20 blur-3xl" />
+            <div className="overflow-hidden rounded-3xl border border-border bg-card shadow-2xl float-y">
               <img
                 src={heroImg}
-                alt="UK GCSE tutor smiling at desk with laptop"
+                alt="Private home tutor in London helping a student with Maths and Computer Science on a laptop, with notebook, pencil and textbooks on a cosy home study desk"
+                title="Private home tutor London — Maths & Computer Science (TutorMentor Near Me)"
                 width={1536}
                 height={1024}
+                loading="eager"
+                fetchPriority="high"
                 className="aspect-[3/2] w-full object-cover"
               />
             </div>
             <div className="absolute -bottom-6 -left-4 hidden sm:block">
-              <div className="card-glow w-56">
-                <div className="flex items-center gap-2 text-gold"><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /><Star className="h-4 w-4 fill-current" /></div>
-                <p className="mt-2 text-sm">"My son went from a 4 to a 7 in Maths in one term."</p>
+              <div className="card-glow w-60">
+                <p className="text-sm">"Weak in Maths to a confident A-Level student in one year."</p>
+                <p className="mt-2 text-xs text-gold font-semibold">— parent, North London</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* BENEFITS */}
+      {/* KEY POINTS */}
       <section className="section-pad">
         <div className="container-x">
           <div className="mx-auto max-w-2xl text-center">
-            <span className="eyebrow">Why parents choose us</span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">A teaching approach built around your child</h2>
-            <p className="mt-3 text-muted-foreground">
-              No one-size-fits-all worksheets. Every lesson is tailored to what your child actually needs.
-            </p>
+            <span className="eyebrow">What I offer</span>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Calm, personal, face-to-face tutoring</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Target, title: "Personalised learning", text: "Every plan is shaped around your child's grade target, weak topics and learning style." },
-              { icon: GraduationCap, title: "Step-by-step teaching", text: "Hard topics broken into small, confidence-building steps — no skipping ahead." },
-              { icon: BookOpen, title: "UK GCSE aligned", text: "Lessons mirror the exact AQA, Edexcel and OCR specifications students sit." },
-              { icon: ShieldCheck, title: "Confidence first", text: "We rebuild self-belief before chasing speed. Confident students score higher." },
+              { icon: Home, title: "Home visits only", text: "I travel to your home in London. No online lessons — students learn best in their own focused environment." },
+              { icon: Target, title: "Personalised plan", text: "Every lesson is built around your level, your weak topics, and your real exam targets." },
+              { icon: Brain, title: "Confidence first", text: "I rebuild self-belief before chasing speed. Weak learners become strong, independent thinkers." },
+              { icon: BookOpen, title: "UK curriculum", text: "KS3, GCSE, A-Level, college and university — aligned with what you actually sit in your exam." },
             ].map((b) => (
               <div key={b.title} className="card-glow">
                 <b.icon className="h-7 w-7 text-gold" />
@@ -110,27 +129,73 @@ function HomePage() {
         </div>
       </section>
 
+      {/* JOURNEY FLOW */}
+      <section className="section-pad">
+        <div className="container-x">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="eyebrow">The student journey</span>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">From confusion to confidence</h2>
+            <p className="mt-3 text-muted-foreground">
+              A philosophical, structured path I guide every student through —
+              one small step at a time.
+            </p>
+          </div>
+
+          <div className="mt-14 relative">
+            <ol className="grid gap-4 sm:grid-cols-2 lg:grid-cols-7">
+              {journey.map((j, i) => (
+                <li key={j.label} className="relative">
+                  <div className="card-glow text-center">
+                    <span className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-primary/20 text-gold ring-1 ring-primary/40">
+                      <j.icon className="h-5 w-5" />
+                    </span>
+                    <p className="mt-3 text-xs font-bold uppercase tracking-wider text-muted-foreground">Step {i + 1}</p>
+                    <p className="mt-1 text-sm font-semibold">{j.label}</p>
+                  </div>
+                  {i < journey.length - 1 && (
+                    <span className="flow-line absolute top-1/2 right-[-12px] hidden h-px w-6 bg-gradient-to-r from-gold/70 to-transparent lg:block" />
+                  )}
+                </li>
+              ))}
+            </ol>
+            <p className="mt-8 text-center text-sm text-muted-foreground italic">
+              Student → guided by mentor → strong, exam-ready learner.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* SUBJECTS PREVIEW */}
       <section className="section-pad">
         <div className="container-x">
           <div className="flex items-end justify-between gap-6 flex-wrap">
             <div>
               <span className="eyebrow">Subjects taught</span>
-              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Three core GCSE subjects, taught with depth</h2>
+              <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Two subjects. Real depth.</h2>
             </div>
             <Link to="/subjects" className="text-sm font-semibold text-gold hover:underline">
-              View all subjects →
+              See full topic list →
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
             {[
-              { icon: BookOpen, title: "GCSE Maths", topics: ["Number", "Algebra", "Geometry", "Trigonometry"] },
-              { icon: Code2, title: "GCSE Computer Science", topics: ["Algorithms", "Python", "Binary & data", "Logic gates"] },
-              { icon: PenLine, title: "English Grammar", topics: ["Sentence structure", "Tenses", "Writing skills", "Reading"] },
+              {
+                icon: BookOpen,
+                title: "Mathematics (UK curriculum)",
+                levels: "KS3 · GCSE · A-Level",
+                topics: ["Algebra & equations", "Geometry & trigonometry", "Statistics & probability", "Calculus basics", "Exam practice & problem solving"],
+              },
+              {
+                icon: Code2,
+                title: "Computer Science",
+                levels: "School · College · University",
+                topics: ["Python, Java, JavaScript, PHP", "Data structures & algorithms", "Databases (SQL/MySQL)", "Cybersecurity & cloud (AWS, Oracle)", "Software engineering & Agile projects"],
+              },
             ].map((s) => (
               <div key={s.title} className="card-glow flex flex-col">
                 <s.icon className="h-8 w-8 text-gold" />
                 <h3 className="mt-4 text-xl font-semibold">{s.title}</h3>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gold/80">{s.levels}</p>
                 <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                   {s.topics.map((t) => (
                     <li key={t} className="flex items-center gap-2">
@@ -139,7 +204,7 @@ function HomePage() {
                   ))}
                 </ul>
                 <Link to="/contact" className="btn-outline mt-6 text-sm self-start">
-                  Book lesson <ArrowRight className="h-4 w-4" />
+                  Request Support by Topic <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             ))}
@@ -152,13 +217,13 @@ function HomePage() {
         <div className="container-x">
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">Parents & students</span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Real results, real confidence</h2>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Real progress in real homes</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {[
-              { name: "Sarah, parent", quote: "My daughter went from dreading Maths homework to actually asking when her next lesson is. Grades jumped two levels." },
-              { name: "Daniel, Year 11", quote: "Computer Science finally clicked. Python and logic gates aren't scary anymore — I actually enjoy them." },
-              { name: "Aisha, parent", quote: "Patient, professional and properly prepared. Worth every penny — my son got a grade 8 in English." },
+              { name: "Sarah, parent — Camden", quote: "He travels to our home every week. My son went from dreading Maths to actually leading his class." },
+              { name: "Daniel, university student", quote: "Python and data structures finally clicked. Habib breaks everything down without making you feel stupid." },
+              { name: "Aisha, parent — East London", quote: "Patient, professional and on-time every visit. We tried online tutors — nothing worked like having him here in person." },
             ].map((t) => (
               <figure key={t.name} className="card-glow">
                 <Quote className="h-6 w-6 text-gold" />
@@ -179,13 +244,14 @@ function HomePage() {
             <div className="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-gold/20 blur-3xl" />
             <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div>
-                <h2 className="text-3xl font-bold sm:text-4xl">Start improving your grades today</h2>
+                <h2 className="text-3xl font-bold sm:text-4xl">Ready for a tutor who visits your home?</h2>
                 <p className="mt-3 max-w-2xl text-muted-foreground">
-                  Book a free 30-minute trial. We'll assess your child's level, agree a grade target, and outline the next 4 lessons.
+                  Tell me your level, your subject and your London area. I'll
+                  reply with availability and a clear plan for the first session.
                 </p>
               </div>
               <div className="flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-primary">Book Free Trial</Link>
+                <Link to="/contact" className="btn-primary">Book a Home Tutor</Link>
                 <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
                   <MessageCircle className="h-4 w-4" /> WhatsApp
                 </a>
