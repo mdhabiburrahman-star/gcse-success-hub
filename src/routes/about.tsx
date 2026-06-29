@@ -33,21 +33,21 @@ import {
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: `About ${TUTOR_NAME} (Habib) — GCSE Tutor London | BrightMind Tutoring` },
+      { title: `${TUTOR_NAME} (Habib) — CV & Portfolio · Private Home Tutor London | TutorMentor Near Me` },
       {
         name: "description",
         content:
-          "Meet Habib — Master of Cybersecurity (Monash University), 13+ years teaching ICT, Programming and Computer Science. GCSE Maths, CS & English tutor based in London, UK.",
+          "Meet Habib — Master of Cybersecurity (Monash University), Bachelor in CSE (Stamford), 13+ years teaching Maths, Programming and Computer Science. Private home tutor in London for school, college and university students.",
       },
-      { property: "og:title", content: `${TUTOR_NAME} (Habib) — GCSE Tutor, London UK` },
+      { property: "og:title", content: `${TUTOR_NAME} (Habib) — Private Home Tutor London` },
       {
         property: "og:description",
         content:
-          "Master of Cybersecurity, 13+ years teaching experience. 1-to-1 GCSE Maths, Computer Science & English tutoring.",
+          "Master of Cybersecurity, 13+ years teaching. Private one-to-one home tutoring in London — Maths & Computer Science.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: "https://brightmindtutoring.lovable.app/about" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/about" }],
     scripts: [
       {
         type: "application/ld+json",
@@ -56,7 +56,7 @@ export const Route = createFileRoute("/about")({
           "@type": "Person",
           name: TUTOR_NAME,
           alternateName: "Habib",
-          jobTitle: "Private GCSE Tutor",
+          jobTitle: "Private Home Tutor — Mathematics & Computer Science",
           email: `mailto:${EMAIL}`,
           telephone: `+${PHONE_E164}`,
           address: { "@type": "PostalAddress", addressLocality: "London", addressCountry: "GB" },
@@ -64,7 +64,7 @@ export const Route = createFileRoute("/about")({
             { "@type": "CollegeOrUniversity", name: "Monash University, Australia" },
             { "@type": "CollegeOrUniversity", name: "Stamford University Bangladesh" },
           ],
-          knowsAbout: ["GCSE Maths", "GCSE Computer Science", "English Grammar", "Cybersecurity", "Python"],
+          knowsAbout: ["Mathematics", "Computer Science", "Programming", "Cybersecurity", "Cloud Computing", "Databases", "Python", "Java"],
         }),
       },
     ],
@@ -82,7 +82,8 @@ function AboutPage() {
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/40 to-gold/30 blur-2xl" />
             <img
               src={tutorImg}
-              alt={`Portrait of ${TUTOR_NAME}, GCSE tutor`}
+              alt={`${TUTOR_NAME} (Habib) — private home tutor in London for Maths and Computer Science, Master of Cybersecurity, smiling studio portrait`}
+              title={`${TUTOR_NAME} — Private home tutor, London`}
               width={900}
               height={1100}
               loading="lazy"
@@ -137,7 +138,7 @@ function AboutPage() {
             <span className="text-foreground/80">({TUTOR_SHORT_NAME})</span>
           </h1>
           <p className="mt-3 text-lg text-gold font-medium">
-            GCSE Maths, Computer Science & English Tutor · London, UK
+            Private Home Tutor · Mathematics & Computer Science · London, UK
           </p>
 
           <p className="mt-6 text-lg text-muted-foreground">
@@ -258,22 +259,17 @@ function AboutPage() {
 
             {/* TUTORING SUBJECTS */}
             <div>
-              <h2 className="text-2xl font-bold">GCSE Subjects I Tutor</h2>
-              <div className="mt-6 grid gap-4 md:grid-cols-3">
+              <h2 className="text-2xl font-bold">Subjects I Tutor</h2>
+              <div className="mt-6 grid gap-4 md:grid-cols-2">
                 <SkillCard
                   icon={BookOpen}
-                  title="GCSE Maths"
-                  items={["Algebra", "Geometry", "Trigonometry", "Number & ratio"]}
+                  title="Mathematics (KS3, GCSE, A-Level)"
+                  items={["Algebra & equations", "Geometry & trigonometry", "Statistics & probability", "Calculus basics", "Exam technique"]}
                 />
                 <SkillCard
                   icon={Code2}
-                  title="GCSE Computer Science"
-                  items={["Algorithms", "Python", "Binary & data", "Logic gates"]}
-                />
-                <SkillCard
-                  icon={PenLine}
-                  title="English Grammar"
-                  items={["Writing", "Reading", "Sentence structure", "Tenses"]}
+                  title="Computer Science (School → University)"
+                  items={["Python, Java, JavaScript, PHP", "Algorithms & data structures", "Databases (SQL/MySQL)", "Cybersecurity & cloud", "Project work & assignments"]}
                 />
               </div>
             </div>
