@@ -365,16 +365,21 @@ function AboutPage() {
           </div>
 
           <div className="mt-12 rounded-2xl border border-border bg-card/60 p-6">
-            <h3 className="text-xl font-bold">Ready to see if we're a good fit?</h3>
+            <h3 className="text-xl font-bold">Work with me</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Book a free 30-minute trial lesson — no obligation.
+              For tutoring enquiries or professional opportunities (Agile delivery,
+              technical account management, customer success, software engineering),
+              get in touch directly.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn-primary text-sm">
-                Book Free Trial
-              </Link>
-              <Link to="/pricing" className="btn-outline text-sm">
-                See pricing
+              <a href={CV_PDF_URL} download="Md-Habibur-Rahman-CV.pdf" className="btn-primary text-sm">
+                <Download className="h-4 w-4" /> Download CV
+              </a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="btn-outline text-sm">
+                <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              </a>
+              <Link to="/contact" className="btn-outline text-sm">
+                Contact
               </Link>
             </div>
           </div>
