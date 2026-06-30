@@ -127,11 +127,18 @@ function AboutPage() {
           </div>
 
           <div className="flex flex-wrap gap-3">
+            <a
+              href={CV_PDF_URL}
+              download="Md-Habibur-Rahman-CV.pdf"
+              className="btn-primary text-sm"
+            >
+              <Download className="h-4 w-4" /> Download CV (PDF)
+            </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp text-sm">
               <MessageCircle className="h-4 w-4" /> Message me
             </a>
-            <Link to="/contact" className="btn-primary text-sm">
-              Book a trial
+            <Link to="/contact" className="btn-outline text-sm">
+              Hire me / Book a session
             </Link>
           </div>
         </aside>
