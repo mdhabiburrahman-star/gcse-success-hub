@@ -19,7 +19,7 @@ import {
   Network,
   Cpu,
 } from "lucide-react";
-import tutorImg from "@/assets/tutor.jpg";
+import tutorImg from "@/assets/tutor-hero.jpg";
 import {
   WHATSAPP_URL,
   EMAIL,
@@ -80,15 +80,18 @@ function AboutPage() {
         <aside className="lg:sticky lg:top-24 space-y-6">
           <div className="relative">
             <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-primary/40 to-gold/30 blur-2xl" />
-            <img
-              src={tutorImg}
-              alt={`${TUTOR_NAME} (Habib) — private home tutor in London for Maths and Computer Science, Master of Cybersecurity, smiling studio portrait`}
-              title={`${TUTOR_NAME} — Private home tutor, London`}
-              width={900}
-              height={1100}
-              loading="lazy"
-              className="w-full rounded-3xl border border-border object-cover shadow-2xl"
-            />
+            <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 p-2 shadow-2xl backdrop-blur-xl ring-1 ring-white/10">
+              <img
+                src={tutorImg}
+                alt={`${TUTOR_NAME} (Habib) — private home tutor in London for Maths and Computer Science, Master of Cybersecurity`}
+                title={`${TUTOR_NAME} — Private home tutor, London`}
+                width={1024}
+                height={1024}
+                loading="lazy"
+                className="w-full rounded-2xl object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 rounded-3xl bg-gradient-to-tr from-white/10 via-transparent to-white/5" />
+            </div>
           </div>
 
           <div className="card-glow space-y-3 text-sm">
