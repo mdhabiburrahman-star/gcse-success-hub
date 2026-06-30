@@ -18,6 +18,10 @@ import {
   Cloud,
   Network,
   Cpu,
+  Download,
+  Users,
+  Target,
+  Headphones,
 } from "lucide-react";
 import tutorImg from "@/assets/tutor-hero.jpg";
 import {
@@ -28,6 +32,7 @@ import {
   TUTOR_NAME,
   TUTOR_SHORT_NAME,
   LINKEDIN_URL,
+  CV_PDF_URL,
 } from "@/lib/site-config";
 
 export const Route = createFileRoute("/about")({
@@ -122,11 +127,18 @@ function AboutPage() {
           </div>
 
           <div className="flex flex-wrap gap-3">
+            <a
+              href={CV_PDF_URL}
+              download="Md-Habibur-Rahman-CV.pdf"
+              className="btn-primary text-sm"
+            >
+              <Download className="h-4 w-4" /> Download CV (PDF)
+            </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="btn-whatsapp text-sm">
               <MessageCircle className="h-4 w-4" /> Message me
             </a>
-            <Link to="/contact" className="btn-primary text-sm">
-              Book a trial
+            <Link to="/contact" className="btn-outline text-sm">
+              Hire me / Book a session
             </Link>
           </div>
         </aside>
@@ -141,7 +153,7 @@ function AboutPage() {
             <span className="text-foreground/80">({TUTOR_SHORT_NAME})</span>
           </h1>
           <p className="mt-3 text-lg text-gold font-medium">
-            Private Home Tutor · Mathematics & Computer Science · London, UK
+            Educator · Software Engineer · Technical Account & Customer Success — London, UK
           </p>
 
           <p className="mt-6 text-lg text-muted-foreground">
@@ -150,13 +162,33 @@ function AboutPage() {
             <strong className="text-foreground">Stamford University Bangladesh</strong>. Over{" "}
             <strong className="text-foreground">5 years</strong> of software engineering experience and{" "}
             <strong className="text-foreground">13+ years</strong> teaching ICT, Programming, Databases and Computer
-            Science to students from HSC through university level.
+            Science — from Bangladesh HSC through UK GCSE, A-Level and university level.
           </p>
           <p className="mt-4 text-muted-foreground">
-            My focus as a tutor is simple: help students who struggle, lack confidence, or have been let down by
-            big-class teaching — and turn that around into real GCSE exam results. I break complex topics into small,
-            manageable steps, and build confidence before chasing speed.
+            I combine deep technical expertise with the communication skills built across years of{" "}
+            <strong className="text-foreground">Agile delivery, project management, technical customer success and
+            technical account management</strong>. I'm equally comfortable mentoring a struggling GCSE student,
+            leading a Scrum team through a sprint, or onboarding an enterprise client onto a complex platform.
           </p>
+
+          {/* CORE PROFESSIONAL SKILLS */}
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {[
+              [Users, "Agile & Scrum Delivery", "Sprint planning, retros, user stories, acceptance criteria."],
+              [Target, "Project Management", "Stakeholder management, roadmaps, risk, delivery on time."],
+              [Headphones, "Technical Customer Success", "Onboarding, training, retention, account health."],
+              [Briefcase, "Technical Account Management", "Enterprise client ownership, pre-sales, solution design."],
+            ].map(([Icon, t, d]: any) => (
+              <div key={t} className="rounded-xl border border-border bg-card/40 p-4">
+                <div className="flex items-center gap-2">
+                  <Icon className="h-4 w-4 text-gold" />
+                  <span className="font-semibold text-foreground text-sm">{t}</span>
+                </div>
+                <p className="mt-1 text-xs text-muted-foreground">{d}</p>
+              </div>
+            ))}
+          </div>
+
 
           <div className="mt-12 space-y-12">
             {/* EDUCATION */}
@@ -333,16 +365,21 @@ function AboutPage() {
           </div>
 
           <div className="mt-12 rounded-2xl border border-border bg-card/60 p-6">
-            <h3 className="text-xl font-bold">Ready to see if we're a good fit?</h3>
+            <h3 className="text-xl font-bold">Work with me</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              Book a free 30-minute trial lesson — no obligation.
+              For tutoring enquiries or professional opportunities (Agile delivery,
+              technical account management, customer success, software engineering),
+              get in touch directly.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
-              <Link to="/contact" className="btn-primary text-sm">
-                Book Free Trial
-              </Link>
-              <Link to="/pricing" className="btn-outline text-sm">
-                See pricing
+              <a href={CV_PDF_URL} download="Md-Habibur-Rahman-CV.pdf" className="btn-primary text-sm">
+                <Download className="h-4 w-4" /> Download CV
+              </a>
+              <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="btn-outline text-sm">
+                <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+              </a>
+              <Link to="/contact" className="btn-outline text-sm">
+                Contact
               </Link>
             </div>
           </div>

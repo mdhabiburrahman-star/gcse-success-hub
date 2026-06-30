@@ -6,7 +6,7 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing — Private Home Tutor London | TutorMentor Near Me" },
-      { name: "description", content: "From £25/hour for private home tutoring in London. Minimum 2-hour sessions plus travel cost. No free trials — every session is fully paid and professionally delivered." },
+      { name: "description", content: "From £25/hour for private home tutoring in London. Minimum 2-hour sessions plus travel cost. Every session is fully paid and professionally delivered." },
       { property: "og:title", content: "Pricing — TutorMentor Near Me" },
       { property: "og:description", content: "From £25/hr home tutoring in London. Maths & Computer Science." },
       { property: "og:url", content: "https://tutormentor.lovable.app/pricing" },
@@ -116,12 +116,13 @@ function PricingPage() {
             <AlertCircle className="h-5 w-5" />
           </span>
           <div>
-            <h3 className="text-lg font-bold">No free trial classes</h3>
+            <h3 className="text-lg font-bold">Every session is fully paid</h3>
             <p className="mt-2 text-sm text-muted-foreground">
-              All sessions are fully paid and professionally delivered. Rates
-              vary based on the student's level, topic difficulty and the
-              travel distance within London. You'll always get a clear, written
-              quote before you confirm a booking — no surprises.
+              All lessons are professionally planned and delivered — no free
+              trials or sample classes. Rates vary based on the student's
+              level, topic difficulty and the travel distance within London.
+              You'll always get a clear, written quote before you confirm a
+              booking — no surprises.
             </p>
           </div>
         </div>

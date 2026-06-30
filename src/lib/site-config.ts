@@ -17,7 +17,8 @@ export const EMAIL = "eng.habibur.cse@gmail.com";
 export const TUTOR_NAME = "Md Habibur Rahman";
 export const TUTOR_SHORT_NAME = "Habib";
 export const LOCATION = "London, United Kingdom — face-to-face home tutoring only";
-export const LINKEDIN_URL = "https://www.linkedin.com/";
+export const LINKEDIN_URL = "https://www.linkedin.com/in/mdrahmann/";
+export const CV_PDF_URL = "/habib-cv.pdf";
 
 // Pricing
 export const PRICE_FROM_PER_HOUR = "£25";
