@@ -45,9 +45,9 @@ export const Route = createFileRoute("/about")({
         content:
           "Master of Cybersecurity, 13+ years teaching. Private one-to-one home tutoring in London — Maths & Computer Science.",
       },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/about" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/about" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/about" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/about" }],
     scripts: [
       {
         type: "application/ld+json",

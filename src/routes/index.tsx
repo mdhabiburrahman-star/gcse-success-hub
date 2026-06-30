@@ -15,10 +15,10 @@ export const Route = createFileRoute("/")({
       { name: "keywords", content: "private home tutor London, math tutor near me, computer science tutor London, one to one tutoring London, home tuition London, GCSE maths tutor, A-Level computer science tutor, university programming tutor, TutorMentor Near Me" },
       { property: "og:title", content: "Private Home Tutor London — Maths & Computer Science" },
       { property: "og:description", content: "Face-to-face one-to-one home tutoring in London. Maths & Computer Science for school, college and university students." },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/" },
-      { property: "og:image", content: "https://brightmindtutoring.lovable.app/og-home.jpg" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/" },
+      { property: "og:image", content: "https://tutormentor.lovable.app/og-home.jpg" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/" }],
     scripts: [{
       type: "application/ld+json",
       children: JSON.stringify({

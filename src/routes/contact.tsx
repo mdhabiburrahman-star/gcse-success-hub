@@ -11,9 +11,9 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Book a private home tutor in London for Maths or Computer Science. Call, email or WhatsApp. Face-to-face one-to-one home tuition only — I visit your home." },
       { property: "og:title", content: "Contact — Book a Home Tutor in London" },
       { property: "og:description", content: "Request a private home tutor across London for Maths or Computer Science." },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/contact" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/contact" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/contact" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/contact" }],
   }),
   component: ContactPage,
 });
