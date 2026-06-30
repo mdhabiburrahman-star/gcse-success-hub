@@ -18,6 +18,10 @@ import {
   Cloud,
   Network,
   Cpu,
+  Download,
+  Users,
+  Target,
+  Headphones,
 } from "lucide-react";
 import tutorImg from "@/assets/tutor-hero.jpg";
 import {
@@ -28,6 +32,7 @@ import {
   TUTOR_NAME,
   TUTOR_SHORT_NAME,
   LINKEDIN_URL,
+  CV_PDF_URL,
 } from "@/lib/site-config";
 
 export const Route = createFileRoute("/about")({
