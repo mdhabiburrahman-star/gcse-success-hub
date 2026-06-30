@@ -9,9 +9,9 @@ export const Route = createFileRoute("/subjects")({
       { name: "keywords", content: "private maths tutor London, computer science tutor London, A-Level computer science tutor, GCSE maths tutor, university programming tutor, home tuition London" },
       { property: "og:title", content: "Tutoring Services — TutorMentor Near Me" },
       { property: "og:description", content: "Maths and Computer Science home tutoring in London — book by topic." },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/subjects" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/subjects" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/subjects" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/subjects" }],
   }),
   component: SubjectsPage,
 });

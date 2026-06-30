@@ -8,9 +8,9 @@ export const Route = createFileRoute("/lesson-plan")({
       { name: "description", content: "A structured journey for every London home-tutoring student: listening, speaking, reading, writing, problem solving, practice and brain boosting. From confusion to clarity." },
       { property: "og:title", content: "Student Journey — TutorMentor Near Me" },
       { property: "og:description", content: "Philosophical, motivational, structured learning path." },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/lesson-plan" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/lesson-plan" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/lesson-plan" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/lesson-plan" }],
   }),
   component: LessonPlanPage,
 });

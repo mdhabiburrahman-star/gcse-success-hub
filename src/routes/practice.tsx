@@ -8,9 +8,9 @@ export const Route = createFileRoute("/practice")({
       { name: "description", content: "Practice resources for active home-tutoring students in London. Maths and Computer Science exercises plus links to Moodle and external practice platforms." },
       { property: "og:title", content: "Practice Hub — TutorMentor Near Me" },
       { property: "og:description", content: "Practice Maths and Computer Science between home visits." },
-      { property: "og:url", content: "https://brightmindtutoring.lovable.app/practice" },
+      { property: "og:url", content: "https://tutormentor.lovable.app/practice" },
     ],
-    links: [{ rel: "canonical", href: "https://brightmindtutoring.lovable.app/practice" }],
+    links: [{ rel: "canonical", href: "https://tutormentor.lovable.app/practice" }],
   }),
   component: PracticePage,
 });
