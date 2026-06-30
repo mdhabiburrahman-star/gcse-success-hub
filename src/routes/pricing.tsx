@@ -6,7 +6,7 @@ export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
       { title: "Pricing — Private Home Tutor London | TutorMentor Near Me" },
-      { name: "description", content: "From £25/hour for private home tutoring in London. Minimum 2-hour sessions plus travel cost. No free trials — every session is fully paid and professionally delivered." },
+      { name: "description", content: "From £25/hour for private home tutoring in London. Minimum 2-hour sessions plus travel cost. Every session is fully paid and professionally delivered." },
       { property: "og:title", content: "Pricing — TutorMentor Near Me" },
       { property: "og:description", content: "From £25/hr home tutoring in London. Maths & Computer Science." },
       { property: "og:url", content: "https://tutormentor.lovable.app/pricing" },
