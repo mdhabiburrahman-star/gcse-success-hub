@@ -450,6 +450,88 @@ const hscIct = [
   },
 ];
 
+const englishGrammar = [
+  {
+    title: "Parts of Speech",
+    icon: BookOpen,
+    items: [
+      "Nouns — common, proper, abstract, collective, countable/uncountable",
+      "Pronouns — personal, possessive, reflexive, relative, demonstrative, indefinite",
+      "Verbs — main, auxiliary, modal, transitive/intransitive, regular/irregular",
+      "Adjectives — descriptive, comparative, superlative, order of adjectives",
+      "Adverbs — manner, place, time, frequency, degree",
+      "Prepositions — of time, place, direction, agent",
+      "Conjunctions — coordinating (FANBOYS), subordinating, correlative",
+      "Interjections and determiners (a, an, the, this, some, any)",
+    ],
+  },
+  {
+    title: "Tenses (All 12 + Usage)",
+    icon: Clock,
+    items: [
+      "Present Simple, Continuous, Perfect, Perfect Continuous",
+      "Past Simple, Continuous, Perfect, Perfect Continuous",
+      "Future Simple, Continuous, Perfect, Perfect Continuous",
+      "Time expressions and signal words for each tense",
+      "Tense agreement in complex sentences",
+      "Narrative tenses for storytelling",
+    ],
+  },
+  {
+    title: "Sentence Structure & Syntax",
+    icon: Sigma,
+    items: [
+      "Subject, verb, object, complement, adjunct",
+      "Simple, compound, complex, compound-complex sentences",
+      "Clauses — independent, dependent, relative, noun, adverbial",
+      "Phrases — noun, verb, adjective, adverb, prepositional",
+      "Active vs passive voice — full transformation practice",
+      "Direct vs indirect (reported) speech",
+      "Conditionals — zero, first, second, third, mixed",
+      "Question forms, tag questions, negation",
+    ],
+  },
+  {
+    title: "Advanced Grammar & Usage",
+    icon: Brain,
+    items: [
+      "Subject–verb agreement (tricky cases)",
+      "Articles — a/an/the, zero article rules",
+      "Modal verbs — ability, obligation, permission, deduction",
+      "Gerunds vs infinitives",
+      "Participles and participle clauses",
+      "Inversion for emphasis (Never have I…)",
+      "Cleft sentences (It was… who…)",
+      "Common errors and misused pairs (affect/effect, its/it's, fewer/less)",
+    ],
+  },
+  {
+    title: "Punctuation & Mechanics",
+    icon: CheckCircle2,
+    items: [
+      "Full stops, commas, semicolons, colons, dashes",
+      "Apostrophes — possession vs contraction",
+      "Quotation marks and dialogue",
+      "Capitalisation rules",
+      "Hyphens, brackets, ellipsis",
+      "Paragraphing and cohesion",
+    ],
+  },
+  {
+    title: "Vocabulary, Writing & Exam Skills",
+    icon: Code2,
+    items: [
+      "Synonyms, antonyms, homophones, collocations",
+      "Prefixes, suffixes, root words",
+      "Idioms, phrasal verbs, formal vs informal register",
+      "Essay, letter, report and email writing",
+      "Comprehension and reading strategies",
+      "GCSE English Language & Literature exam techniques",
+      "IELTS / SSC / HSC English paper preparation",
+    ],
+  },
+];
+
 function TopicGroupCard({ group }: { group: TopicGroup }) {
   const Icon = group.icon;
   return (
