@@ -594,6 +594,26 @@ function SubjectsPage() {
         </p>
       </div>
 
+      {/* ENGLISH GRAMMAR */}
+      <div className="mt-20">
+        <div className="flex items-center gap-3">
+          <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary/20 text-gold ring-1 ring-primary/40">
+            <BookOpen className="h-6 w-6" />
+          </span>
+          <div>
+            <h2 className="text-3xl font-bold">English Grammar & Language</h2>
+            <p className="text-sm text-muted-foreground">
+              Full grammar coverage — school KS3/GCSE, HSC/SSC English, IELTS foundations and everyday communication.
+            </p>
+          </div>
+        </div>
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          {englishGrammar.map((c) => (
+            <TopicGroupCard key={c.title} group={c} />
+          ))}
+        </div>
+      </div>
+
       {/* MATHS */}
       <div className="mt-16">
         <div className="flex items-center gap-3">
