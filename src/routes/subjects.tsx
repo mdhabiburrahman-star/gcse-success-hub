@@ -18,10 +18,7 @@ import {
 export const Route = createFileRoute("/subjects")({
   head: () => ({
     meta: [
-      {
-        title:
-          "Tutoring Topics — UK GCSE & A-Level Maths, Computer Science + Bangladesh HSC ICT | TutorMentor Near Me",
-      },
+      { title: "Subjects & Topics — GCSE, A-Level & HSC ICT | TutorMentor" },
       {
         name: "description",
         content:

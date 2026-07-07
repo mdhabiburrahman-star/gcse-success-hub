@@ -6,7 +6,7 @@ import { WHATSAPP_URL, BRAND_NAME, TUTOR_SHORT_NAME } from "@/lib/site-config";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Private Home Tutor London — Maths & Computer Science | TutorMentor Near Me" },
+      { title: "Private Home Tutor London — Maths, CS & English" },
       { name: "description", content: "Expert mentor in London for Maths and Computer Science. One-to-one face-to-face home tutoring for school, GCSE, A-Level, college and university students." },
       { name: "keywords", content: "private home tutor London, math tutor near me, computer science tutor London, expert mentor London, GCSE maths tutor, A-Level computer science tutor, TutorMentor Near Me" },
       { property: "og:title", content: "Expert Mentor — Private Home Tutor London" },

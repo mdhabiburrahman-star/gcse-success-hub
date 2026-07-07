@@ -38,11 +38,11 @@ import {
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: `${TUTOR_NAME} (Habib) — CV & Portfolio · Private Home Tutor London | TutorMentor Near Me` },
+      { title: "About Habib — CV & Portfolio | TutorMentor" },
       {
         name: "description",
         content:
-          "Meet Habib — Master of Cybersecurity (Monash University), Bachelor in CSE (Stamford), 13+ years teaching Maths, Programming and Computer Science. Private home tutor in London for school, college and university students.",
+          "Master of Cybersecurity, 13+ years teaching Maths, Programming & Computer Science. Private one-to-one home tutor in London.",
       },
       { property: "og:title", content: `${TUTOR_NAME} (Habib) — Private Home Tutor London` },
       {

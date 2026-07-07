@@ -4,7 +4,7 @@ import { Calculator, Code2, Sparkles, Lock, ArrowRight, ExternalLink } from "luc
 export const Route = createFileRoute("/practice")({
   head: () => ({
     meta: [
-      { title: "Practice Hub — Maths & Computer Science | TutorMentor Near Me" },
+      { title: "Practice Hub — Maths & Computer Science | TutorMentor" },
       { name: "description", content: "Practice resources for active home-tutoring students in London. Maths and Computer Science exercises plus links to Moodle and external practice platforms." },
       { property: "og:title", content: "Practice Hub — TutorMentor Near Me" },
       { property: "og:description", content: "Practice Maths and Computer Science between home visits." },

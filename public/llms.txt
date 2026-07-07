@@ -1,0 +1,15 @@
+# TutorMentor
+
+> Private one-to-one home tutoring in London for Maths, Computer Science and English — GCSE, A-Level, college and university students, plus full Bangladesh HSC ICT syllabus support.
+
+TutorMentor is the portfolio and booking site of Habib, a Master of Cybersecurity with 13+ years of teaching experience. Face-to-face home tuition across London and online sessions worldwide.
+
+## Pages
+
+- [Home](/): Overview of home tutoring services in London.
+- [About Habib — CV & Portfolio](/about): Qualifications, experience, professional skills and downloadable CV.
+- [Subjects & Topics](/subjects): Detailed syllabus coverage for UK KS3/GCSE/A-Level Maths, Computer Science, English grammar, and Bangladesh HSC ICT.
+- [Practice Hub](/practice): Practice resources for Maths and Computer Science.
+- [Lesson Plan](/lesson-plan): How lessons are structured and delivered.
+- [Pricing](/pricing): Hourly rates and session packages.
+- [Contact](/contact): Get in touch to book a lesson.
