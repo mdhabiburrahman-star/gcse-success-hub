@@ -40,7 +40,7 @@ function HomePage() {
             <span className="text-gradient">Expert Mentor</span>
             <br />
             <span className="text-foreground/85 text-2xl sm:text-3xl md:text-4xl">
-              Private home tutor for Maths &amp; Computer Science
+              Private home tutor for Maths, Computer Science &amp; English
             </span>
           </h1>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">
