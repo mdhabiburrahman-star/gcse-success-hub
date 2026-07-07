@@ -1,0 +1,2 @@
+DROP POLICY "view sheet if tutor or shared" ON public.ai_practice_sheets;
+CREATE POLICY "view sheet if tutor or shared" ON public.ai_practice_sheets FOR SELECT USING (has_role(auth.uid(), 'tutor'::app_role) OR EXISTS (SELECT 1 FROM public.practice_sheet_shares s WHERE s.sheet_id = ai_practice_sheets.id AND s.student_id = auth.uid()));
