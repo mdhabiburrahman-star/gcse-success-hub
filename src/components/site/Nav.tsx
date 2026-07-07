@@ -4,7 +4,7 @@ import { Menu, X, BookOpenCheck } from "lucide-react";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/subjects", label: "Tutoring" },
+  { to: "/subjects", label: "Subjects" },
   { to: "/about", label: "CV & Portfolio" },
   { to: "/lesson-plan", label: "Journey" },
   { to: "/pricing", label: "Pricing" },
