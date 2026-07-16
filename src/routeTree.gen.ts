@@ -13,6 +13,7 @@ import { Route as SubjectsRouteImport } from './routes/subjects'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PracticeRouteImport } from './routes/practice'
+import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LessonPlanRouteImport } from './routes/lesson-plan'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -39,6 +40,11 @@ const PricingRoute = PricingRouteImport.update({
 const PracticeRoute = PracticeRouteImport.update({
   id: '/practice',
   path: '/practice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PortfolioRoute = PortfolioRouteImport.update({
+  id: '/portfolio',
+  path: '/portfolio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const LessonPlanRoute = LessonPlanRouteImport.update({
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/lesson-plan': typeof LessonPlanRoute
+  '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -94,6 +101,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/lesson-plan': typeof LessonPlanRoute
+  '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -108,6 +116,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/lesson-plan': typeof LessonPlanRoute
+  '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
   '/pricing': typeof PricingRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -122,6 +131,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/lesson-plan'
+    | '/portfolio'
     | '/practice'
     | '/pricing'
     | '/sitemap.xml'
@@ -134,6 +144,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/lesson-plan'
+    | '/portfolio'
     | '/practice'
     | '/pricing'
     | '/sitemap.xml'
@@ -147,6 +158,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/lesson-plan'
+    | '/portfolio'
     | '/practice'
     | '/pricing'
     | '/sitemap.xml'
@@ -161,6 +173,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
   LessonPlanRoute: typeof LessonPlanRoute
+  PortfolioRoute: typeof PortfolioRoute
   PracticeRoute: typeof PracticeRoute
   PricingRoute: typeof PricingRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -195,6 +208,13 @@ declare module '@tanstack/react-router' {
       path: '/practice'
       fullPath: '/practice'
       preLoaderRoute: typeof PracticeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/portfolio': {
+      id: '/portfolio'
+      path: '/portfolio'
+      fullPath: '/portfolio'
+      preLoaderRoute: typeof PortfolioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/lesson-plan': {
@@ -267,6 +287,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
   LessonPlanRoute: LessonPlanRoute,
+  PortfolioRoute: PortfolioRoute,
   PracticeRoute: PracticeRoute,
   PricingRoute: PricingRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
