@@ -7,6 +7,7 @@ const links = [
   { to: "/subjects", label: "Subjects" },
   { to: "/about", label: "CV & Portfolio" },
   { to: "/portfolio", label: "Cyber CV" },
+  { to: "/cv", label: "My CVs" },
   { to: "/lesson-plan", label: "Journey" },
   { to: "/pricing", label: "Pricing" },
   { to: "/contact", label: "Contact" },

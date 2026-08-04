@@ -15,6 +15,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LessonPlanRouteImport } from './routes/lesson-plan'
+import { Route as CvRouteImport } from './routes/cv'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as AboutRouteImport } from './routes/about'
@@ -52,6 +53,11 @@ const LessonPlanRoute = LessonPlanRouteImport.update({
   path: '/lesson-plan',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CvRoute = CvRouteImport.update({
+  id: '/cv',
+  path: '/cv',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
@@ -87,6 +93,7 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
+  '/cv': typeof CvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -100,6 +107,7 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
+  '/cv': typeof CvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -115,6 +123,7 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
+  '/cv': typeof CvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -130,6 +139,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/contact'
+    | '/cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -143,6 +153,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/contact'
+    | '/cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -157,6 +168,7 @@ export interface FileRouteTypes {
     | '/about'
     | '/auth'
     | '/contact'
+    | '/cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -172,6 +184,7 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
+  CvRoute: typeof CvRoute
   LessonPlanRoute: typeof LessonPlanRoute
   PortfolioRoute: typeof PortfolioRoute
   PracticeRoute: typeof PracticeRoute
@@ -222,6 +235,13 @@ declare module '@tanstack/react-router' {
       path: '/lesson-plan'
       fullPath: '/lesson-plan'
       preLoaderRoute: typeof LessonPlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cv': {
+      id: '/cv'
+      path: '/cv'
+      fullPath: '/cv'
+      preLoaderRoute: typeof CvRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -286,6 +306,7 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
+  CvRoute: CvRoute,
   LessonPlanRoute: LessonPlanRoute,
   PortfolioRoute: PortfolioRoute,
   PracticeRoute: PracticeRoute,
