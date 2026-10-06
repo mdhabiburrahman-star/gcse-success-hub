@@ -29,6 +29,8 @@ const CYBER_CV_PDF = "/habib-cybersecurity-cv.pdf";
 export const Route = createFileRoute("/portfolio")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Cybersecurity CV — Md Habibur Rahman | London" },
       {
         name: "description",

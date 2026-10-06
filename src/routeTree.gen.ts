@@ -15,6 +15,7 @@ import { Route as PricingRouteImport } from './routes/pricing'
 import { Route as PracticeRouteImport } from './routes/practice'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as LessonPlanRouteImport } from './routes/lesson-plan'
+import { Route as EcommerceCvRouteImport } from './routes/ecommerce-cv'
 import { Route as CvRouteImport } from './routes/cv'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AuthRouteImport } from './routes/auth'
@@ -51,6 +52,11 @@ const PortfolioRoute = PortfolioRouteImport.update({
 const LessonPlanRoute = LessonPlanRouteImport.update({
   id: '/lesson-plan',
   path: '/lesson-plan',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EcommerceCvRoute = EcommerceCvRouteImport.update({
+  id: '/ecommerce-cv',
+  path: '/ecommerce-cv',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CvRoute = CvRouteImport.update({
@@ -94,6 +100,7 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
+  '/ecommerce-cv': typeof EcommerceCvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -108,6 +115,7 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
+  '/ecommerce-cv': typeof EcommerceCvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -124,6 +132,7 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/contact': typeof ContactRoute
   '/cv': typeof CvRoute
+  '/ecommerce-cv': typeof EcommerceCvRoute
   '/lesson-plan': typeof LessonPlanRoute
   '/portfolio': typeof PortfolioRoute
   '/practice': typeof PracticeRoute
@@ -140,6 +149,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/cv'
+    | '/ecommerce-cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -154,6 +164,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/cv'
+    | '/ecommerce-cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -169,6 +180,7 @@ export interface FileRouteTypes {
     | '/auth'
     | '/contact'
     | '/cv'
+    | '/ecommerce-cv'
     | '/lesson-plan'
     | '/portfolio'
     | '/practice'
@@ -185,6 +197,7 @@ export interface RootRouteChildren {
   AuthRoute: typeof AuthRoute
   ContactRoute: typeof ContactRoute
   CvRoute: typeof CvRoute
+  EcommerceCvRoute: typeof EcommerceCvRoute
   LessonPlanRoute: typeof LessonPlanRoute
   PortfolioRoute: typeof PortfolioRoute
   PracticeRoute: typeof PracticeRoute
@@ -235,6 +248,13 @@ declare module '@tanstack/react-router' {
       path: '/lesson-plan'
       fullPath: '/lesson-plan'
       preLoaderRoute: typeof LessonPlanRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ecommerce-cv': {
+      id: '/ecommerce-cv'
+      path: '/ecommerce-cv'
+      fullPath: '/ecommerce-cv'
+      preLoaderRoute: typeof EcommerceCvRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/cv': {
@@ -307,6 +327,7 @@ const rootRouteChildren: RootRouteChildren = {
   AuthRoute: AuthRoute,
   ContactRoute: ContactRoute,
   CvRoute: CvRoute,
+  EcommerceCvRoute: EcommerceCvRoute,
   LessonPlanRoute: LessonPlanRoute,
   PortfolioRoute: PortfolioRoute,
   PracticeRoute: PracticeRoute,
@@ -317,3 +338,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

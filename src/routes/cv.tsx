@@ -144,12 +144,12 @@ function CvPage() {
           <span className="text-gradient">Curriculum Vitae</span>
         </h1>
         <p className="mt-3 max-w-2xl text-muted-foreground">
-          Three tailored versions of my CV. The graduate CV below is available as both a PDF and an
+          Four tailored versions of my CV. The graduate CV below is available as both a PDF and an
           editable Word document.
         </p>
 
         {/* CV switcher */}
-        <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-2xl border border-primary/50 bg-card/70 p-4">
             <div className="text-sm font-semibold text-gold">Graduate / Internship CV</div>
             <p className="mt-1 text-xs text-muted-foreground">
@@ -165,6 +165,11 @@ function CvPage() {
           <Link to="/about" className="rounded-2xl border border-border bg-card/40 p-4 transition-colors hover:border-primary/40">
             <div className="text-sm font-semibold text-foreground">Tutoring CV</div>
             <p className="mt-1 text-xs text-muted-foreground">Teaching experience, subjects and qualifications.</p>
+            <span className="mt-3 inline-block text-xs font-medium text-gold">View →</span>
+          </Link>
+          <Link to="/ecommerce-cv" className="rounded-2xl border border-border bg-card/40 p-4 transition-colors hover:border-primary/40">
+            <div className="text-sm font-semibold text-foreground">E-Commerce CV</div>
+            <p className="mt-1 text-xs text-muted-foreground">Operations, partnerships &amp; product management. PDF + Word.</p>
             <span className="mt-3 inline-block text-xs font-medium text-gold">View →</span>
           </Link>
         </div>

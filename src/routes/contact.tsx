@@ -7,6 +7,8 @@ import { WHATSAPP_URL, EMAIL, LOCATION, PHONE_DISPLAY, PHONE_E164, WHATSAPP_DISP
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Contact — Book a Home Tutor in London | TutorMentor Near Me" },
       { name: "description", content: "Book a private home tutor in London for Maths or Computer Science. Call, email or WhatsApp. Face-to-face one-to-one home tuition only — I visit your home." },
       { property: "og:title", content: "Contact — Book a Home Tutor in London" },

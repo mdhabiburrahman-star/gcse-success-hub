@@ -8,6 +8,10 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Tutor sign in — TutorMentor Near Me" },
+      { property: "og:description", content: "Sign in to manage TutorMentor student requests and bookings." },
       { title: "Tutor sign in — TutorMentor Near Me admin" },
       { name: "description", content: "Sign in to the TutorMentor Near Me admin panel to manage student requests and bookings." },
       { name: "robots", content: "noindex,nofollow" },
