@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep the e-commerce CV content in a shared browser-safe data module used by its page and document generation, so downloadable and displayed versions stay consistent.
