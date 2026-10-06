@@ -49,7 +49,6 @@ function EcommerceCvPage() {
         <section><h2 className="text-xl font-bold">Professional Experience</h2><div className="mt-5 space-y-7">{cv.experience.map(role => <div key={role.heading} className="border-l border-border pl-5"><h3 className="font-semibold">{role.heading}</h3><p className="mt-1 text-sm text-gold">{role.detail}</p><Points items={role.points} /></div>)}</div></section>
         <section><h2 className="text-xl font-bold">Education</h2><div className="mt-4 space-y-5">{cv.education.map(education => <div key={education.degree}><h3 className="font-semibold">{education.degree}</h3><p className="mt-1 text-sm text-gold">{education.detail}</p><Points items={education.points} /></div>)}</div></section>
         <section><h2 className="text-xl font-bold">Licenses &amp; Certifications</h2><Points items={cv.certifications} /></section>
-        <section><h2 className="text-xl font-bold">Verification Statement</h2><Points items={cv.verification} /></section>
       </article>
       <footer className="border-t border-border pt-7"><Downloads /></footer>
     </div>
