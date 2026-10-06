@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -37,7 +38,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -90,8 +91,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Private Home Tutor London — Maths & Computer Science | TutorMentor Near Me" },
       { property: "og:description", content: "Expert mentor in London for Maths and Computer Science. One-to-one face-to-face home tutoring for school, GCSE, A-Level, college and university students." },
       { name: "twitter:description", content: "Expert mentor in London for Maths and Computer Science. One-to-one face-to-face home tutoring for school, GCSE, A-Level, college and university students." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2b3de440-07ad-44b5-89bd-1a6a92b5bed1" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/2b3de440-07ad-44b5-89bd-1a6a92b5bed1" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
