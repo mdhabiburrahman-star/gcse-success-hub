@@ -4,6 +4,8 @@ import { Sprout, Brain, Dumbbell, Trophy, ArrowRight, Headphones, MessageSquare,
 export const Route = createFileRoute("/lesson-plan")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Student Journey & Lesson Plan — Private Home Tutoring London | TutorMentor Near Me" },
       { name: "description", content: "A structured journey for every London home-tutoring student: listening, speaking, reading, writing, problem solving, practice and brain boosting. From confusion to clarity." },
       { property: "og:title", content: "Student Journey — TutorMentor Near Me" },

@@ -18,6 +18,8 @@ import {
 export const Route = createFileRoute("/subjects")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Subjects & Topics — GCSE, A-Level & HSC ICT | TutorMentor" },
       {
         name: "description",

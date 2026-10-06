@@ -25,6 +25,11 @@ type Profile = {
 export const Route = createFileRoute("/_authenticated/admin")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "description", content: "Private TutorMentor administration for student requests, practice assignments and progress notes." },
+      { property: "og:title", content: "Admin panel — TutorMentor Near Me" },
+      { property: "og:description", content: "Private administration for TutorMentor students and tutoring requests." },
       { title: "Admin panel — TutorMentor Near Me" },
       { name: "robots", content: "noindex,nofollow" },
     ],

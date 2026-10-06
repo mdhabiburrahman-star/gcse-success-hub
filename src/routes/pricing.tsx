@@ -5,6 +5,8 @@ import { WHATSAPP_URL } from "@/lib/site-config";
 export const Route = createFileRoute("/pricing")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Pricing — Private Home Tutor London | TutorMentor Near Me" },
       { name: "description", content: "From £25/hour for private home tutoring in London. Minimum 2-hour sessions plus travel cost. Every session is fully paid and professionally delivered." },
       { property: "og:title", content: "Pricing — TutorMentor Near Me" },
